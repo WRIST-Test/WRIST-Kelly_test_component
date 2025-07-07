@@ -555,12 +555,22 @@
               "valueSets": "Free text"
             }
           ],
-          "description": "This is a procedure record entry. There may be 0 to many record entries under a section. Each record entry is made up of a number of elements or data items.",
+          "description": "<p>This is a procedure record entry. There may be 0 to many record entries under a section. Each record entry is made up of a number of elements or data items.</p>",
           "maximumMultiplicity": "*",
           "minimumMultiplicity": "0",
           "mro": "R",
           "name": "Procedure record entry",
-          "type": "group"
+          "type": "group",
+          "informationType": "Record",
+          "derivedFrom": "",
+          "isComponent": true,
+          "relationshipType": "specialisation",
+          "valueDomain": [
+            {
+              "type": "CD"
+            }
+          ],
+          "implementationGuidance": "<p><br></p>"
         }
       ],
       "description": "<p>The details of any procedures performed. Includes both psychological and medical therapies and procedures (e.g. cognitive behaviour therapy, hip replacement)</p>",
