@@ -563,14 +563,22 @@
           "type": "group"
         }
       ],
-      "description": "The details of any procedures performed. Includes both psychological and medical therapies and procedures (e.g. cognitive behaviour therapy, hip replacement)",
+      "description": "<p>The details of any procedures performed. Includes both psychological and medical therapies and procedures (e.g. cognitive behaviour therapy, hip replacement)</p>",
       "maximumMultiplicity": "1",
       "minimumMultiplicity": "0",
       "mro": "R",
       "name": "Procedures and therapies",
       "type": "group",
-      "isComponent": true,
-      "relationshipType": "neither"
+      "isComponent": false,
+      "relationshipType": "neither",
+      "informationType": "Record",
+      "derivedFrom": "",
+      "valueDomain": [
+        {
+          "type": "CD"
+        }
+      ],
+      "implementationGuidance": "<p><br></p>"
     },
     {
       "name": "Item",
