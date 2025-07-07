@@ -571,6 +571,569 @@
             }
           ],
           "implementationGuidance": "<p><br></p>"
+        },
+        {
+          "concept": [
+            {
+              "concept": [
+                {
+                  "description": "The date the procedure was performed.",
+                  "maximumMultiplicity": "1",
+                  "minimumMultiplicity": "0",
+                  "mro": "R",
+                  "name": "Date",
+                  "type": "item",
+                  "valueDomain": [
+                    {
+                      "property": [
+                        {
+                          "timeStampPrecision": "YMDHM"
+                        }
+                      ],
+                      "type": "datetime"
+                    }
+                  ],
+                  "valueSets": "Date and time."
+                },
+                {
+                  "concept": [
+                    {
+                      "description": "The coded value for location.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Coded value",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "5",
+                              "minLength": "3"
+                            }
+                          ],
+                          "type": "string"
+                        }
+                      ],
+                      "valueSets": "NHS data dictionary : -  <a class=\"\" href=\"https://www.datadictionary.nhs.uk/data_dictionary/nhs_business_definitions/o/organisation_data_service_de.asp?shownav=1\" target=\"\" title=\"\">Organisation data service code</a> \n                        "
+                    },
+                    {
+                      "description": "Free text field to be used if no code is available",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Free text",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "150"
+                            }
+                          ],
+                          "type": "text"
+                        }
+                      ],
+                      "valueSets": "Free text"
+                    }
+                  ],
+                  "description": "The location where the procedure was undertaken.",
+                  "maximumMultiplicity": "1",
+                  "minimumMultiplicity": "0",
+                  "mro": "R",
+                  "name": "Location",
+                  "type": "group"
+                },
+                {
+                  "concept": [
+                    {
+                      "description": "The name of the professional.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Name",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "70"
+                            }
+                          ],
+                          "type": "string"
+                        }
+                      ],
+                      "valueSets": "Free text."
+                    },
+                    {
+                      "description": "The role the professional has in relation to the person e.g. GP, physiotherapist, community nurse, social worker etc",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Role",
+                      "type": "item",
+                      "valueSets": "FHIR value set :-  <a class=\"\" href=\"https://simplifier.net/ukcore/codesystem-ukcore-sdsjobrolename\" target=\"\" title=\"\">SDSjobroletype</a> \n                        "
+                    },
+                    {
+                      "description": "The grade of the professional.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Grade",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "150"
+                            }
+                          ],
+                          "type": "text"
+                        }
+                      ],
+                      "valueSets": "Free text"
+                    },
+                    {
+                      "description": "The specialty of the professional e.g. physiotherapy, oncology, mental health etc",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Speciality",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "3"
+                            }
+                          ],
+                          "type": "string"
+                        }
+                      ],
+                      "valueSets": "NHS data dictionary -  <a href=\"https://datadictionary.nhs.uk/data_elements/activity_treatment_function_code.html?hl=activity%2Ctreatment%2Cfunction%2Ccode\" target=\"\" title=\"\">Activity treatment function code</a> \n                        "
+                    },
+                    {
+                      "description": "Professional identifier for the professional e.g. GMC number, HCPC number etc or the personal identifier used by the local organisation.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Professional identifier",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "32"
+                            }
+                          ],
+                          "type": "string"
+                        }
+                      ],
+                      "valueSets": "NHS data dictionary : -  <a href=\"https://datadictionary.nhs.uk/data_elements/professional_registration_entry_identifier.html\" target=\"\" title=\"\">Professional registration identifier</a> \n                        "
+                    },
+                    {
+                      "description": "The name of the organisation the professional works for.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Organisation",
+                      "type": "group"
+                    },
+                    {
+                      "description": "Contact details of the professional",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Contact details",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "35"
+                            }
+                          ],
+                          "type": "string"
+                        }
+                      ],
+                      "valueSets": "NHS data dictionary -  <a href=\"https://datadictionary.nhs.uk/data_elements/uk_telephone_number.html?hl=number\" target=\"\" title=\"\">UK phone number</a> \n                        "
+                    }
+                  ],
+                  "description": "The professional who performed the procedure.",
+                  "maximumMultiplicity": "1",
+                  "minimumMultiplicity": "0",
+                  "mro": "R",
+                  "name": "Performing professional",
+                  "type": "group"
+                },
+                {
+                  "concept": [
+                    {
+                      "description": "The procedure code.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Coded value",
+                      "type": "item",
+                      "valueSets": "SNOMED CT : - &lt;&lt; <a class=\"\" href=\"https://termbrowser.nhs.uk/?perspective=full&conceptId1=71388002&edition=uk-edition&release=&server=https://termbrowser.nhs.uk/sct-browser-api/snomed&langRefset=999001261000000100,999000691000001104\" target=\"\" title=\"\">71388002</a>  |Procedure| OR &lt;&lt; <a href=\"https://termbrowser.nhs.uk/?perspective=full&conceptId1=129125009&edition=uk-edition&release=&server=https://termbrowser.nhs.uk/sct-browser-api/snomed&langRefset=999001261000000100,999000691000001104\" target=\"\" title=\"\">129125009</a>  |Procedure with explicit context|"
+                    },
+                    {
+                      "description": "Free text field to be used if no code is available",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Free text",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "150"
+                            }
+                          ],
+                          "type": "text"
+                        }
+                      ],
+                      "valueSets": "Free text"
+                    }
+                  ],
+                  "description": "The therapeutic or diagnostic procedure performed. Includes both psychological and medical therapies and procedures (e.g. cognitive\nbehaviour therapy, or follow-up interventions as a result of physical health\nchecks). Complementary or alternative procedures and therapies should be recorded here.",
+                  "maximumMultiplicity": "1",
+                  "minimumMultiplicity": "1",
+                  "mro": "M",
+                  "name": "Procedure",
+                  "type": "group"
+                },
+                {
+                  "concept": [
+                    {
+                      "description": "The coded value of the anatomical site.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Coded value",
+                      "type": "item",
+                      "valueSets": "SNOMED CT :- &lt; <a href=\"https://termbrowser.nhs.uk/?perspective=full&conceptId1=123037004&edition=uk-edition&release=&server=https://termbrowser.nhs.uk/sct-browser-api/snomed&langRefset=999001261000000100,999000691000001104\" target=\"\" title=\"\">123037004</a>  |Body structure (body structure)|"
+                    },
+                    {
+                      "description": "Free text field to be used if no code is available",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Free text",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "150"
+                            }
+                          ],
+                          "type": "text"
+                        }
+                      ],
+                      "valueSets": "Free text"
+                    }
+                  ],
+                  "description": "The body site of the procedure",
+                  "maximumMultiplicity": "1",
+                  "minimumMultiplicity": "0",
+                  "mro": "R",
+                  "name": "Anatomical site",
+                  "type": "group"
+                },
+                {
+                  "concept": [
+                    {
+                      "description": "The coded value for laterality.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Coded value",
+                      "type": "item",
+                      "valueSets": "SNOMED CT:- &lt; <a href=\"https://termbrowser.nhs.uk/?perspective=full&conceptId1=182353008&edition=uk-edition&release=&server=https://termbrowser.nhs.uk/sct-browser-api/snomed&langRefset=999001261000000100,999000691000001104\" target=\"\" title=\"\">182353008</a>  |Side (qualifier value)|"
+                    },
+                    {
+                      "description": "Free text field to be used if no code is available",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Free text",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "150"
+                            }
+                          ],
+                          "type": "text"
+                        }
+                      ],
+                      "valueSets": "Free text"
+                    }
+                  ],
+                  "description": "Laterality of the procedure",
+                  "maximumMultiplicity": "1",
+                  "minimumMultiplicity": "0",
+                  "mro": "R",
+                  "name": "Laterality",
+                  "type": "group"
+                },
+                {
+                  "concept": [
+                    {
+                      "description": "The coded value for complications relating to procedure.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Coded value",
+                      "type": "item",
+                      "valueSets": "SNOMED CT : - &lt; <a href=\"https://termbrowser.nhs.uk/?perspective=full&conceptId1=404684003&edition=uk-edition&release=&server=https://termbrowser.nhs.uk/sct-browser-api/snomed&langRefset=999001261000000100,999000691000001104\" target=\"\" title=\"\">404684003</a>  |Clinical finding (finding)| <p/> \n                        "
+                    },
+                    {
+                      "description": "Free text field to be used if no code is available",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Free text",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "150"
+                            }
+                          ],
+                          "type": "text"
+                        }
+                      ],
+                      "valueSets": "Free text"
+                    }
+                  ],
+                  "description": "Details of any intra-operative complications encountered during the procedure, arising during the person\u2019s stay in the recovery unit or directly attributable to the procedure.",
+                  "maximumMultiplicity": "1",
+                  "minimumMultiplicity": "0",
+                  "mro": "R",
+                  "name": "Complications related to procedure",
+                  "type": "group"
+                },
+                {
+                  "concept": [
+                    {
+                      "description": "The coded value for specific anesthesia issues.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Coded value",
+                      "type": "item",
+                      "valueSets": "SNOMED CT"
+                    },
+                    {
+                      "description": "Free text field to be used if no code is available",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Free text",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "150"
+                            }
+                          ],
+                          "type": "text"
+                        }
+                      ],
+                      "valueSets": "Free text"
+                    }
+                  ],
+                  "description": "Details of any adverse reaction to any anesthetic agents including local anesthesia. Problematic intubation, transfusion reaction, etc.",
+                  "maximumMultiplicity": "1",
+                  "minimumMultiplicity": "0",
+                  "mro": "R",
+                  "name": "Specific anesthesia issues",
+                  "type": "group"
+                },
+                {
+                  "concept": [
+                    {
+                      "description": "The name of the person completing the record.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Name",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "70"
+                            }
+                          ],
+                          "type": "string"
+                        }
+                      ],
+                      "valueSets": "Free text."
+                    },
+                    {
+                      "description": "The organisational role of the person completing record.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Role",
+                      "type": "item",
+                      "valueSets": "FHIR value set :-  <a href=\"https://simplifier.net/ukcore/codesystem-ukcore-sdsjobrolename\" target=\"\" title=\"\">SDSjobrole</a> \n                        "
+                    },
+                    {
+                      "description": "The grade of the person completing the record.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Grade",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "150"
+                            }
+                          ],
+                          "type": "text"
+                        }
+                      ],
+                      "valueSets": "Free text."
+                    },
+                    {
+                      "description": "The main specialty of the person completing the record.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Specialty",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "3"
+                            }
+                          ],
+                          "type": "string"
+                        }
+                      ],
+                      "valueSets": "NHS data dictionary :-  <a href=\"https://datadictionary.nhs.uk/data_elements/activity_treatment_function_code.html?hl=activity%2Ctreatment%2Cfunction%2Ccode\" target=\"\" title=\"\">Activity treatment function code</a> \n                        "
+                    },
+                    {
+                      "description": "The organisation the person completing the record works for.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Organisation",
+                      "type": "group",
+                      "valueSets": "\n                             <span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, Geneva, sans-serif; font-size: 12px;\">NHS data dictionary : - </span> \n                             <a href=\"https://www.datadictionary.nhs.uk/supporting_information/organisation_data_service.html\" target=\"\" title=\"\">Organisation data service</a> \n                        "
+                    },
+                    {
+                      "description": "Professional identifier for the person completing the record e.g. GMC number, HCPC number etc, or the personal identifier used by the local organisation.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Professional identifier",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "32"
+                            }
+                          ],
+                          "type": "string"
+                        }
+                      ],
+                      "valueSets": "NHS data dictionary :-  <a href=\"https://datadictionary.nhs.uk/data_elements/professional_registration_entry_identifier.html\" target=\"\" title=\"\">Professional registration identifier</a> \n                        "
+                    },
+                    {
+                      "description": "The date and time the record was completed.",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Date completed",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "timeStampPrecision": "YMDHM"
+                            }
+                          ],
+                          "type": "datetime"
+                        }
+                      ],
+                      "valueSets": "Date and time."
+                    },
+                    {
+                      "description": "Contact details of the person completing the record. <br clear=\"none\"/> \n                        ",
+                      "maximumMultiplicity": "1",
+                      "minimumMultiplicity": "0",
+                      "mro": "R",
+                      "name": "Contact details",
+                      "type": "item",
+                      "valueDomain": [
+                        {
+                          "property": [
+                            {
+                              "maxLength": "35"
+                            }
+                          ],
+                          "type": "string"
+                        }
+                      ],
+                      "valueSets": "NHS data dictionary : -  <a href=\"https://datadictionary.nhs.uk/data_elements/uk_telephone_number.html?hl=number\" target=\"\" title=\"\">UK telephone number</a> \n                        "
+                    }
+                  ],
+                  "description": "Details of the person completing the record.",
+                  "maximumMultiplicity": "1",
+                  "minimumMultiplicity": "0",
+                  "mro": "R",
+                  "name": "Person completing record",
+                  "type": "group"
+                },
+                {
+                  "description": "Any further textual comment to clarify such as statement that information is partial or incomplete. Also indicate the outcome of the procedure.",
+                  "maximumMultiplicity": "1",
+                  "minimumMultiplicity": "0",
+                  "mro": "R",
+                  "name": "Comment",
+                  "type": "item",
+                  "valueDomain": [
+                    {
+                      "property": [
+                        {
+                          "maxLength": "150"
+                        }
+                      ],
+                      "type": "text"
+                    }
+                  ],
+                  "valueSets": "Free text"
+                }
+              ],
+              "description": "This is a procedure record entry. There may be 0 to many record entries under a section. Each record entry is made up of a number of elements or data items.",
+              "maximumMultiplicity": "*",
+              "minimumMultiplicity": "0",
+              "mro": "R",
+              "name": "Procedure record entry",
+              "type": "group"
+            }
+          ],
+          "description": "The details of any procedures performed. Includes both psychological and medical therapies and procedures (e.g. cognitive behaviour therapy, hip replacement)",
+          "maximumMultiplicity": "1",
+          "minimumMultiplicity": "0",
+          "mro": "R",
+          "name": "Procedures and therapies",
+          "type": "group",
+          "isComponent": true,
+          "relationshipType": "specialisation"
         }
       ],
       "description": "<p>The details of any procedures performed. Includes both psychological and medical therapies and procedures (e.g. cognitive behaviour therapy, hip replacement)</p>",
