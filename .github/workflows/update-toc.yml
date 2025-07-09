@@ -1,0 +1,32 @@
+name: Update TOC
+
+on:
+    push:
+        branches:
+            - main
+
+permissions:
+    contents: write
+
+jobs:
+    update-toc:
+        if: startsWith(github.event.head_commit.message, 'Trigger TOC update')
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                  python-version: "3.x"
+
+            - name: Regenerate TOC
+              run: python scripts/update-latest-toc.py
+
+            - name: Commit TOC changes
+              uses: stefanzweifel/git-auto-commit-action@v4
+              with:
+                  commit_message: "ci: regenerate Latest TOC"
+                  file_pattern: README.md
