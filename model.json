@@ -5,7 +5,7 @@
   "component_sets": [
     {
       "name": "WRIST-Test/WRIST-core-information-standard",
-      "id": "3e9a14427be4d5790f65fe2783af4c7bda387cc2"
+      "id": "2.0.0"
     }
   ],
   "concept": [
@@ -348,7 +348,7 @@
                   "valueSets": "Free text"
                 }
               ],
-              "description": "Details of any intra-operative complications encountered during the procedure, arising during the person\u2019s stay in the recovery unit or directly attributable to the procedure.",
+              "description": "Details of any intra-operative complications encountered during the procedure, arising during the person’s stay in the recovery unit or directly attributable to the procedure.",
               "maximumMultiplicity": "1",
               "minimumMultiplicity": "0",
               "mro": "R",
@@ -911,7 +911,7 @@
                       "valueSets": "Free text"
                     }
                   ],
-                  "description": "Details of any intra-operative complications encountered during the procedure, arising during the person\u2019s stay in the recovery unit or directly attributable to the procedure.",
+                  "description": "Details of any intra-operative complications encountered during the procedure, arising during the person’s stay in the recovery unit or directly attributable to the procedure.",
                   "maximumMultiplicity": "1",
                   "minimumMultiplicity": "0",
                   "mro": "R",
